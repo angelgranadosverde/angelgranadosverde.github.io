@@ -5,6 +5,32 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Ángel Eduardo Granados Verde — Automation Engineer</title>
 <meta name="description" content="Ingeniero de Automatización y Systems Architect B2B. Diseño flujos de trabajo autónomos, integro IA y optimizo CRM para maximizar retención y flujo de caja." />
+<link rel="canonical" href="https://angelgranadosverde.github.io/" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2307080A'/%3E%3Ccircle cx='16' cy='16' r='6.5' fill='none' stroke='%2300FF88' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='16' r='2.2' fill='%2300FF88'/%3E%3C/svg%3E" />
+
+<!-- Open Graph / social share preview -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://angelgranadosverde.github.io/" />
+<meta property="og:title" content="Ángel Granados Verde — Automation Engineer & B2B Systems Architect" />
+<meta property="og:description" content="Sistemas que convierten. Infraestructura que escala. GoHighLevel, Make, n8n y OpenAI — 100% bilingüe ES/EN." />
+<meta property="og:image" content="https://angelgranadosverde.github.io/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ángel Granados Verde — Automation Engineer & B2B Systems Architect" />
+<meta name="twitter:description" content="Sistemas que convierten. Infraestructura que escala. GoHighLevel, Make, n8n y OpenAI — 100% bilingüe ES/EN." />
+<meta name="twitter:image" content="https://angelgranadosverde.github.io/assets/og-image.png" />
+
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 <style>
 :root {
   --bg: #07080A;
@@ -208,6 +234,54 @@ header {
   margin-top: 36px;
   display: flex; flex-wrap: wrap; gap: 12px;
 }
+
+/* ---------- Soft capture (low-friction email, for not-ready-yet visitors) ---------- */
+.soft-capture {
+  margin-top: 20px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+}
+.soft-capture-label {
+  font-size: 13px; color: var(--fg-4);
+}
+.soft-lead-form {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.soft-lead-form input {
+  height: 36px; padding: 0 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.02);
+  color: var(--fg);
+  font: inherit; font-size: 13px;
+  border-radius: 7px;
+  width: 200px;
+  transition: border-color 0.16s, box-shadow 0.16s;
+}
+.soft-lead-form input:focus {
+  outline: none;
+  border-color: var(--neon-line);
+  box-shadow: 0 0 0 3px rgba(0,255,136,0.10);
+}
+.soft-lead-form button {
+  height: 36px; padding: 0 14px;
+  border: 1px solid var(--line-3);
+  background: rgba(255,255,255,0.02);
+  color: var(--fg-2);
+  font: inherit; font-size: 12.5px; font-weight: 500;
+  border-radius: 7px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.18s, border-color 0.18s, background 0.18s;
+}
+.soft-lead-form button:hover {
+  color: var(--neon);
+  border-color: var(--neon-line);
+  background: rgba(0,255,136,0.05);
+}
+.soft-lead-note {
+  font-size: 12px; color: var(--fg-4);
+}
+.soft-lead-note.is-ok { color: var(--neon); }
+.soft-lead-note.is-err { color: var(--red); }
 
 /* ---------- Terminal ---------- */
 .terminal {
@@ -829,6 +903,14 @@ footer a:hover { color: var(--neon); }
               <span data-i18n="cta-secondary">Ver el stack</span>
             </a>
           </div>
+          <div class="soft-capture" data-reveal>
+            <span class="soft-capture-label" data-i18n="soft-label">¿Aún no es momento de agendar?</span>
+            <form class="soft-lead-form" id="soft-lead-form" novalidate>
+              <input type="email" name="email" data-i18n-placeholder="soft-placeholder" placeholder="tu@email.com" required autocomplete="email">
+              <button type="submit" data-i18n="soft-cta">Déjame tu email →</button>
+            </form>
+            <span class="soft-lead-note" id="soft-lead-note"></span>
+          </div>
         </div>
 
         <div data-reveal>
@@ -1386,6 +1468,8 @@ footer a:hover { color: var(--neon); }
       'hero-h1-2':'Infraestructura que escala.',
       'hero-lead':'Ingeniero de Automatización y Systems Architect B2B. Diseño flujos de trabajo autónomos, integro IA y optimizo CRM para maximizar retención y flujo de caja.',
       'cta-primary':'Agenda una llamada','cta-secondary':'Ver el stack',
+      'soft-label':'¿Aún no es momento de agendar?','soft-placeholder':'tu@email.com','soft-cta':'Déjame tu email →',
+      'soft-ok':'Listo — te escribo directo.','soft-err':'Algo falló. Intenta de nuevo o escríbeme a granadoangelv@gmail.com',
       'stat-1-k':'Retención','stat-2-k':'Ciclo','stat-3-k':'Recurrencia',
       'stack-label':'Stack operativo',
       'cap-eyebrow':'Qué construyo',
@@ -1455,6 +1539,8 @@ footer a:hover { color: var(--neon); }
       'hero-h1-2':'Infrastructure that scales.',
       'hero-lead':'Automation Engineer and B2B Systems Architect. I design autonomous workflows, integrate AI, and optimize CRMs to maximize retention and cash flow.',
       'cta-primary':'Book a call','cta-secondary':'See the stack',
+      'soft-label':"Not ready to book yet?",'soft-placeholder':'you@email.com','soft-cta':'Leave your email →',
+      'soft-ok':"Got it — I'll write to you directly.",'soft-err':'Something failed. Try again or email granadoangelv@gmail.com',
       'stat-1-k':'Retention','stat-2-k':'Cycle','stat-3-k':'Recurrence',
       'stack-label':'Operating stack',
       'cap-eyebrow':'What I build',
@@ -1523,6 +1609,10 @@ footer a:hover { color: var(--neon); }
       const k = el.getAttribute('data-i18n');
       if (d[k] != null) el.textContent = d[k];
     });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const k = el.getAttribute('data-i18n-placeholder');
+      if (d[k] != null) el.setAttribute('placeholder', d[k]);
+    });
     document.querySelectorAll('.lang button').forEach(b => {
       b.classList.toggle('active', b.dataset.lang === l);
     });
@@ -1553,9 +1643,65 @@ footer a:hover { color: var(--neon); }
         a1: (data.get('revenue') || '').toString(),
         a2: (data.get('team') || '').toString(),
       });
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { lead_type: 'qualified_call' });
       window.open('https://calendar.app.google/HUtKtFYCUQ51s7Kp9?' + params.toString(), '_blank', 'noopener');
     });
   }
+
+  /* Soft lead capture (low-friction email, for visitors not ready to book) */
+  /* SETUP: create a free form at https://formspree.io (2 min, no card), verify your
+     email, then replace SOFT_LEAD_ENDPOINT below with your real endpoint
+     (https://formspree.io/f/xxxxxxxx). Until then this falls back to a mailto link. */
+  const SOFT_LEAD_ENDPOINT = 'https://formspree.io/f/REPLACE_ME';
+  const softForm = document.getElementById('soft-lead-form');
+  const softNote = document.getElementById('soft-lead-note');
+  if (softForm) {
+    softForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = (new FormData(softForm).get('email') || '').toString().trim();
+      if (!email) return;
+      const lang = document.documentElement.lang === 'en' ? 'en' : 'es';
+      const okMsg = COPY[lang]['soft-ok'];
+      const errMsg = COPY[lang]['soft-err'];
+      if (SOFT_LEAD_ENDPOINT.includes('REPLACE_ME')) {
+        window.location.href = 'mailto:granadoangelv@gmail.com?subject=' +
+          encodeURIComponent('Lead desde la web') + '&body=' + encodeURIComponent('Email de contacto: ' + email);
+        softNote.textContent = okMsg;
+        softNote.className = 'soft-lead-note is-ok';
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { lead_type: 'soft_email' });
+        softForm.reset();
+        return;
+      }
+      try {
+        const res = await fetch(SOFT_LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, source: 'soft-capture', page: window.location.href }),
+        });
+        if (res.ok) {
+          softNote.textContent = okMsg;
+          softNote.className = 'soft-lead-note is-ok';
+          if (typeof gtag === 'function') gtag('event', 'generate_lead', { lead_type: 'soft_email' });
+          softForm.reset();
+        } else {
+          softNote.textContent = errMsg;
+          softNote.className = 'soft-lead-note is-err';
+        }
+      } catch {
+        softNote.textContent = errMsg;
+        softNote.className = 'soft-lead-note is-err';
+      }
+    });
+  }
+
+  /* GA4 CTA click tracking (works once a real Measurement ID is set above) */
+  document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'cta_click', { cta_label: (btn.textContent || '').trim().slice(0, 40) });
+      }
+    });
+  });
 </script>
 </body>
 </html>
