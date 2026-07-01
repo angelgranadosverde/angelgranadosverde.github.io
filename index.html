@@ -30,6 +30,7 @@
   "name": "Ángel Granados Verde — Automation Engineer",
   "url": "https://angelgranadosverde.github.io/",
   "image": "https://angelgranadosverde.github.io/assets/og-image.png",
+  "dateModified": "2026-07-01",
   "description": "Ingeniero de Automatización y B2B Systems Architect. Diseño flujos de trabajo autónomos en Make/n8n, integro IA y optimizo infraestructura CRM (GoHighLevel) para operaciones B2B.",
   "areaServed": "Worldwide",
   "availableLanguage": ["es", "en"],
@@ -52,6 +53,44 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IA Aplicada (OpenAI API)" } }
     ]
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué hace exactamente un Automation Engineer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Diseño e implemento sistemas que reemplazan tareas manuales: automatizaciones en Make y n8n, infraestructura CRM en GoHighLevel, e integraciones de IA vía la API de OpenAI. El objetivo es que el proceso corra solo, sin depender de que alguien lo ejecute a mano." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Con qué herramientas trabajas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Make, n8n, GoHighLevel, la API de OpenAI/ChatGPT, Claude, Gemini, ClickUp y Notion. Elijo la herramienta según el caso — no vendo una plataforma en particular." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajas con clientes fuera de Venezuela?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Trabajo 100% remoto y soy bilingüe español/inglés (C2), con foco en operaciones B2B internacionales." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre Make y n8n?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Make es una plataforma no-code por suscripción con muchos conectores nativos listos para usar. n8n es open-source y se puede auto-hospedar, lo que da más control técnico y menor costo a volumen alto. Elijo según presupuesto, volumen y cuánto control técnico quiere tener el cliente." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa exactamente en la llamada de 45 minutos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Auditamos tu flujo de trabajo actual en vivo y sales con un Blueprint de automatización concreto — no es una demo de ventas ni una presentación genérica." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura una implementación típica?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende del alcance real de tu operación. La llamada de auditoría es justamente el paso que define un roadmap y un tiempo concreto antes de cotizar cualquier cosa." }
+    }
+  ]
 }
 </script>
 
@@ -800,6 +839,16 @@ section { padding: 96px 0; position: relative; }
 }
 .about-facts .v { font-size: 14px; color: var(--fg); }
 
+/* ---------- FAQ ---------- */
+.faq-list { display: flex; flex-direction: column; max-width: 78ch; }
+.faq-item {
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.faq-item:first-child { padding-top: 0; }
+.faq-item h3 { font-size: 17px; margin-bottom: 10px; }
+.faq-item p { font-size: 14.5px; color: var(--fg-3); line-height: 1.6; }
+
 /* ---------- Booking ---------- */
 .booking { padding: 96px 0 120px; position: relative; }
 .booking-card {
@@ -928,6 +977,7 @@ footer a:hover { color: var(--neon); }
       <a href="#metricas" data-i18n="nav-2">Resultados</a>
       <a href="#metodo" data-i18n="nav-3">Método</a>
       <a href="#sobre-mi" data-i18n="nav-4">Sobre mí</a>
+      <a href="#faq" data-i18n="nav-6">FAQ</a>
       <a href="#contacto" data-i18n="nav-5">Contacto</a>
     </nav>
     <div class="nav-actions">
@@ -946,6 +996,7 @@ footer a:hover { color: var(--neon); }
     <a href="#metricas" data-i18n="nav-2">Resultados</a>
     <a href="#metodo" data-i18n="nav-3">Método</a>
     <a href="#sobre-mi" data-i18n="nav-4">Sobre mí</a>
+    <a href="#faq" data-i18n="nav-6">FAQ</a>
     <a href="#contacto" data-i18n="nav-5">Contacto</a>
   </nav>
 </header>
@@ -1456,6 +1507,44 @@ footer a:hover { color: var(--neon); }
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="section-eyebrow" data-i18n="faq-eyebrow">Preguntas frecuentes</span>
+        <div>
+          <h2 data-i18n="faq-title">Antes de agendar, esto es lo que la gente pregunta.</h2>
+        </div>
+      </div>
+      <div class="faq-list" data-reveal>
+        <div class="faq-item">
+          <h3 data-i18n="faq-1-q">¿Qué hace exactamente un Automation Engineer?</h3>
+          <p data-i18n="faq-1-a">Diseño e implemento sistemas que reemplazan tareas manuales: automatizaciones en Make y n8n, infraestructura CRM en GoHighLevel, e integraciones de IA vía la API de OpenAI. El objetivo es que el proceso corra solo, sin depender de que alguien lo ejecute a mano.</p>
+        </div>
+        <div class="faq-item">
+          <h3 data-i18n="faq-2-q">¿Con qué herramientas trabajas?</h3>
+          <p data-i18n="faq-2-a">Make, n8n, GoHighLevel, la API de OpenAI/ChatGPT, Claude, Gemini, ClickUp y Notion. Elijo la herramienta según el caso — no vendo una plataforma en particular.</p>
+        </div>
+        <div class="faq-item">
+          <h3 data-i18n="faq-3-q">¿Trabajas con clientes fuera de Venezuela?</h3>
+          <p data-i18n="faq-3-a">Sí. Trabajo 100% remoto y soy bilingüe español/inglés (C2), con foco en operaciones B2B internacionales.</p>
+        </div>
+        <div class="faq-item">
+          <h3 data-i18n="faq-4-q">¿Cuál es la diferencia entre Make y n8n?</h3>
+          <p data-i18n="faq-4-a">Make es una plataforma no-code por suscripción con muchos conectores nativos listos para usar. n8n es open-source y se puede auto-hospedar, lo que da más control técnico y menor costo a volumen alto. Elijo según presupuesto, volumen y cuánto control técnico quiere tener el cliente.</p>
+        </div>
+        <div class="faq-item">
+          <h3 data-i18n="faq-5-q">¿Qué pasa exactamente en la llamada de 45 minutos?</h3>
+          <p data-i18n="faq-5-a">Auditamos tu flujo de trabajo actual en vivo y sales con un Blueprint de automatización concreto — no es una demo de ventas ni una presentación genérica.</p>
+        </div>
+        <div class="faq-item">
+          <h3 data-i18n="faq-6-q">¿Cuánto dura una implementación típica?</h3>
+          <p data-i18n="faq-6-a">Depende del alcance real de tu operación. La llamada de auditoría es justamente el paso que define un roadmap y un tiempo concreto antes de cotizar cualquier cosa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- BOOKING -->
   <section class="booking" id="contacto">
     <div class="container">
@@ -1542,7 +1631,21 @@ footer a:hover { color: var(--neon); }
     es: {
       'brand-name':'Ángel Granados Verde',
       'skip-link':'Saltar al contenido',
-      'nav-1':'Capacidades','nav-2':'Resultados','nav-3':'Método','nav-4':'Sobre mí','nav-5':'Contacto',
+      'nav-1':'Capacidades','nav-2':'Resultados','nav-3':'Método','nav-4':'Sobre mí','nav-5':'Contacto','nav-6':'FAQ',
+      'faq-eyebrow':'Preguntas frecuentes',
+      'faq-title':'Antes de agendar, esto es lo que la gente pregunta.',
+      'faq-1-q':'¿Qué hace exactamente un Automation Engineer?',
+      'faq-1-a':'Diseño e implemento sistemas que reemplazan tareas manuales: automatizaciones en Make y n8n, infraestructura CRM en GoHighLevel, e integraciones de IA vía la API de OpenAI. El objetivo es que el proceso corra solo, sin depender de que alguien lo ejecute a mano.',
+      'faq-2-q':'¿Con qué herramientas trabajas?',
+      'faq-2-a':'Make, n8n, GoHighLevel, la API de OpenAI/ChatGPT, Claude, Gemini, ClickUp y Notion. Elijo la herramienta según el caso — no vendo una plataforma en particular.',
+      'faq-3-q':'¿Trabajas con clientes fuera de Venezuela?',
+      'faq-3-a':'Sí. Trabajo 100% remoto y soy bilingüe español/inglés (C2), con foco en operaciones B2B internacionales.',
+      'faq-4-q':'¿Cuál es la diferencia entre Make y n8n?',
+      'faq-4-a':'Make es una plataforma no-code por suscripción con muchos conectores nativos listos para usar. n8n es open-source y se puede auto-hospedar, lo que da más control técnico y menor costo a volumen alto. Elijo según presupuesto, volumen y cuánto control técnico quiere tener el cliente.',
+      'faq-5-q':'¿Qué pasa exactamente en la llamada de 45 minutos?',
+      'faq-5-a':'Auditamos tu flujo de trabajo actual en vivo y sales con un Blueprint de automatización concreto — no es una demo de ventas ni una presentación genérica.',
+      'faq-6-q':'¿Cuánto dura una implementación típica?',
+      'faq-6-a':'Depende del alcance real de tu operación. La llamada de auditoría es justamente el paso que define un roadmap y un tiempo concreto antes de cotizar cualquier cosa.',
       'cta-header':'Agendar llamada',
       'hero-pill-1':'Disponible · pipeline Q2 abierto',
       'hero-pill-2':'100% Bilingüe · ES / EN',
@@ -1614,7 +1717,21 @@ footer a:hover { color: var(--neon); }
     en: {
       'brand-name':'Ángel Granados Verde',
       'skip-link':'Skip to content',
-      'nav-1':'Capabilities','nav-2':'Results','nav-3':'Method','nav-4':'About','nav-5':'Contact',
+      'nav-1':'Capabilities','nav-2':'Results','nav-3':'Method','nav-4':'About','nav-5':'Contact','nav-6':'FAQ',
+      'faq-eyebrow':'Frequently asked questions',
+      'faq-title':"Before you book, here's what people ask.",
+      'faq-1-q':'What does an Automation Engineer actually do?',
+      'faq-1-a':'I design and implement systems that replace manual tasks: automations in Make and n8n, CRM infrastructure in GoHighLevel, and AI integrations via the OpenAI API. The goal is for the process to run on its own, without depending on someone executing it by hand.',
+      'faq-2-q':'What tools do you work with?',
+      'faq-2-a':"Make, n8n, GoHighLevel, the OpenAI/ChatGPT API, Claude, Gemini, ClickUp and Notion. I choose the tool based on the case — I don't sell a specific platform.",
+      'faq-3-q':'Do you work with clients outside Venezuela?',
+      'faq-3-a':"Yes. I work 100% remote and I'm bilingual Spanish/English (C2), focused on international B2B operations.",
+      'faq-4-q':"What's the difference between Make and n8n?",
+      'faq-4-a':'Make is a subscription no-code platform with many ready-to-use native connectors. n8n is open-source and can be self-hosted, giving more technical control and lower cost at high volume. I choose based on budget, volume, and how much technical control the client wants.',
+      'faq-5-q':'What actually happens in the 45-minute call?',
+      'faq-5-a':"We audit your current workflow live and you walk away with a concrete automation blueprint — it's not a sales demo or a generic pitch.",
+      'faq-6-q':'How long does a typical implementation take?',
+      'faq-6-a':"It depends on the real scope of your operation. The audit call is exactly the step that defines a roadmap and a concrete timeline before quoting anything.",
       'cta-header':'Book a call',
       'hero-pill-1':'Available · Q2 pipeline open',
       'hero-pill-2':'100% Bilingual · EN / ES',
