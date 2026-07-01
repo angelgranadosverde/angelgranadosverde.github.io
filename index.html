@@ -22,6 +22,39 @@
 <meta name="twitter:description" content="Sistemas que convierten. Infraestructura que escala. GoHighLevel, Make, n8n y OpenAI — 100% bilingüe ES/EN." />
 <meta name="twitter:image" content="https://angelgranadosverde.github.io/assets/og-image.png" />
 
+<!-- Structured data: helps Google (and AI answer engines) resolve who you are and what you do -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Ángel Granados Verde — Automation Engineer",
+  "url": "https://angelgranadosverde.github.io/",
+  "image": "https://angelgranadosverde.github.io/assets/og-image.png",
+  "description": "Ingeniero de Automatización y B2B Systems Architect. Diseño flujos de trabajo autónomos en Make/n8n, integro IA y optimizo infraestructura CRM (GoHighLevel) para operaciones B2B.",
+  "areaServed": "Worldwide",
+  "availableLanguage": ["es", "en"],
+  "founder": {
+    "@type": "Person",
+    "name": "Ángel Eduardo Granados Verde",
+    "jobTitle": "Automation Engineer & B2B Systems Architect",
+    "email": "mailto:granadoangelv@gmail.com",
+    "url": "https://angelgranadosverde.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/angel-granados-verde"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Cabudare", "addressCountry": "VE" },
+    "knowsAbout": ["Make", "n8n", "GoHighLevel", "OpenAI API", "CRM automation", "B2B workflow architecture"]
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas de Automatización (Make / n8n)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Infraestructura CRM (GoHighLevel)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IA Aplicada (OpenAI API)" } }
+    ]
+  }
+}
+</script>
+
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Z6NS44WYE"></script>
 <script>
@@ -44,8 +77,8 @@
   --fg: #F1F5F9;
   --fg-2: #CBD5E1;
   --fg-3: #94A3B8;
-  --fg-4: #64748B;
-  --fg-5: #475569;
+  --fg-4: #8494AC;
+  --fg-5: #6B7FA0;
   --neon: #00FF88;
   --neon-2: #4DFFAA;
   --neon-soft: rgba(0, 255, 136, 0.14);
@@ -125,6 +158,43 @@ header {
 .nav-links a:hover { color: var(--fg); }
 @media (max-width: 880px) { .nav-links { display: none; } }
 .nav-actions { display: flex; align-items: center; gap: 12px; }
+
+.nav-burger {
+  display: none;
+  align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(255,255,255,0.02);
+  color: var(--fg-2);
+  cursor: pointer;
+}
+.nav-burger:hover { color: var(--neon); border-color: var(--neon-line); }
+@media (max-width: 880px) { .nav-burger { display: flex; } }
+
+.mobile-nav {
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--line);
+  background: var(--bg-2);
+}
+.mobile-nav a {
+  padding: 14px 32px;
+  font-size: 14px; color: var(--fg-2);
+  border-bottom: 1px solid var(--line-2);
+}
+.mobile-nav a:hover { color: var(--neon); background: rgba(0,255,136,0.04); }
+.mobile-nav[hidden] { display: none; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  z-index: 100;
+  padding: 10px 16px;
+  background: var(--neon);
+  color: #07080A;
+  font-weight: 600; font-size: 13px;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus { left: 0; }
 
 .lang {
   display: inline-flex; align-items: center; gap: 2px;
@@ -843,6 +913,7 @@ footer a:hover { color: var(--neon); }
 </style>
 </head>
 <body id="top">
+<a class="skip-link" href="#main-content" data-i18n="skip-link">Saltar al contenido</a>
 <header>
   <div class="container nav">
     <div class="brand">
@@ -852,7 +923,7 @@ footer a:hover { color: var(--neon); }
         <span class="role">automation.engineer</span>
       </div>
     </div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="nav-links">
       <a href="#capacidades" data-i18n="nav-1">Capacidades</a>
       <a href="#metricas" data-i18n="nav-2">Resultados</a>
       <a href="#metodo" data-i18n="nav-3">Método</a>
@@ -860,16 +931,26 @@ footer a:hover { color: var(--neon); }
       <a href="#contacto" data-i18n="nav-5">Contacto</a>
     </nav>
     <div class="nav-actions">
-      <div class="lang" role="tablist">
-        <button data-lang="es" class="active">ES</button>
-        <button data-lang="en">EN</button>
+      <div class="lang">
+        <button data-lang="es" class="active" aria-pressed="true" aria-label="Cambiar a español">ES</button>
+        <button data-lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
       </div>
       <a class="btn btn-primary" href="#contacto" data-i18n="cta-header">Agendar llamada</a>
+      <button class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </div>
+  <nav class="mobile-nav" id="mobile-nav" hidden>
+    <a href="#capacidades" data-i18n="nav-1">Capacidades</a>
+    <a href="#metricas" data-i18n="nav-2">Resultados</a>
+    <a href="#metodo" data-i18n="nav-3">Método</a>
+    <a href="#sobre-mi" data-i18n="nav-4">Sobre mí</a>
+    <a href="#contacto" data-i18n="nav-5">Contacto</a>
+  </nav>
 </header>
 
-<main>
+<main id="main-content">
 
   <!-- HERO -->
   <section class="hero">
@@ -904,12 +985,12 @@ footer a:hover { color: var(--neon); }
             </a>
           </div>
           <div class="soft-capture" data-reveal>
-            <span class="soft-capture-label" data-i18n="soft-label">¿Aún no es momento de agendar?</span>
+            <label class="soft-capture-label" for="soft-lead-email" data-i18n="soft-label">¿Aún no es momento de agendar?</label>
             <form class="soft-lead-form" id="soft-lead-form" novalidate>
-              <input type="email" name="email" data-i18n-placeholder="soft-placeholder" placeholder="tu@email.com" required autocomplete="email">
+              <input type="email" id="soft-lead-email" name="email" data-i18n-placeholder="soft-placeholder" placeholder="tu@email.com" required autocomplete="email">
               <button type="submit" data-i18n="soft-cta">Déjame tu email →</button>
             </form>
-            <span class="soft-lead-note" id="soft-lead-note"></span>
+            <span class="soft-lead-note" id="soft-lead-note" role="status" aria-live="polite"></span>
           </div>
         </div>
 
@@ -1460,6 +1541,7 @@ footer a:hover { color: var(--neon); }
   const COPY = {
     es: {
       'brand-name':'Ángel Granados Verde',
+      'skip-link':'Saltar al contenido',
       'nav-1':'Capacidades','nav-2':'Resultados','nav-3':'Método','nav-4':'Sobre mí','nav-5':'Contacto',
       'cta-header':'Agendar llamada',
       'hero-pill-1':'Disponible · pipeline Q2 abierto',
@@ -1531,6 +1613,7 @@ footer a:hover { color: var(--neon); }
     },
     en: {
       'brand-name':'Ángel Granados Verde',
+      'skip-link':'Skip to content',
       'nav-1':'Capabilities','nav-2':'Results','nav-3':'Method','nav-4':'About','nav-5':'Contact',
       'cta-header':'Book a call',
       'hero-pill-1':'Available · Q2 pipeline open',
@@ -1614,7 +1697,9 @@ footer a:hover { color: var(--neon); }
       if (d[k] != null) el.setAttribute('placeholder', d[k]);
     });
     document.querySelectorAll('.lang button').forEach(b => {
-      b.classList.toggle('active', b.dataset.lang === l);
+      const isActive = b.dataset.lang === l;
+      b.classList.toggle('active', isActive);
+      b.setAttribute('aria-pressed', String(isActive));
     });
     try { localStorage.setItem('agv-lang', l); } catch {}
   }
@@ -1622,6 +1707,23 @@ footer a:hover { color: var(--neon); }
   document.querySelectorAll('.lang button').forEach(b => {
     b.addEventListener('click', () => setLang(b.dataset.lang));
   });
+
+  /* Mobile nav toggle */
+  const navBurger = document.getElementById('nav-burger');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (navBurger && mobileNav) {
+    navBurger.addEventListener('click', () => {
+      const willOpen = mobileNav.hasAttribute('hidden');
+      if (willOpen) mobileNav.removeAttribute('hidden'); else mobileNav.setAttribute('hidden', '');
+      navBurger.setAttribute('aria-expanded', String(willOpen));
+    });
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileNav.setAttribute('hidden', '');
+        navBurger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   let initial = 'es';
   try {
